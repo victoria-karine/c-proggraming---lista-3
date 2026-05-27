@@ -12,7 +12,19 @@ int main() {
     printf("Digite o modo seguro (1/0): ");
     scanf("%d", &modoSeguro);
 
-    // implemente a lógica aqui
+    if (modoSeguro == 1) {
+        if (senha == 1) {
+            printf("DESBLOQUEADO\n");
+        } else {
+            printf("BLOQUEADO\n");
+        }
+    } else {
+        if (biometria == 1 || senha == 1) {
+            printf("DESBLOQUEADO\n");
+        } else {
+            printf("BLOQUEADO\n");
+        }
+    }
 
     return 0;
 }
